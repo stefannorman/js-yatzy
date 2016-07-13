@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
 /*
  * Yatzy Version 1.0
@@ -21,6 +22,7 @@
  <html>
 	<head>
 		<title>YATZY by jNorm</title>
+		<meta charset="utf-8"  />
 		<script language="javascript">
 		<!--
 
@@ -87,7 +89,7 @@
 
 			numOfRolls++;
 			if(numOfRolls < 3)
-				document.getElementById("but").value = "Klicka p? de t?rningar du vill sl? om";
+				document.getElementById("but").value = "Klicka på de tärningar du vill slå om";
 			else
 				document.getElementById("but").value = "Registrera resultatet i tabellen";
 			document.getElementById("but").disabled = true;
@@ -100,12 +102,12 @@
 		{
 			switch(numOfRolls)
 			{
-				case 0 : s = "f?rsta"; break;
+				case 0 : s = "första"; break;
 				case 1 : s = "andra"; break;
 				case 2 : s = "tredje"; break;
 			}
 
-			document.getElementById("but").value = "Kasta t?rningarna " + s + " kastet";
+			document.getElementById("but").value = "Kasta tärningarna " + s + " kastet";
 			document.getElementById("but").disabled = false;
 		}
 
@@ -246,7 +248,7 @@
 
 			if(done)
 			{
-				alert("Grattis, du fick " + sum2 + " po?ng.\nTryck F5 f?r att spela igen.");
+				alert("Grattis, du fick " + sum2 + " po?ng.\nTryck F5 för att spela igen.");
 			}
 			else
 			{
@@ -269,11 +271,11 @@
 	<img id=dice3 src="images/dice.gif" width="40" height="40" onClick="diceArr[3].setThrowable(!diceArr[3].throwIt)">
 	<img id=dice4 src="images/dice.gif" width="40" height="40" onClick="diceArr[4].setThrowable(!diceArr[4].throwIt)">
 	<img id=dice5 src="images/dice.gif" width="40" height="40" onClick="diceArr[5].setThrowable(!diceArr[5].throwIt)">
-	<p><input id="but" type="button" value="Kasta t?rningarna f?rsta kastet" onClick="roll()">
+	<p><input id="but" type="button" value="Kasta tärningarna första kastet" onClick="roll()">
 	<p>
 	<table border=1>
 	<tr><td>ETTOR</td><td align="center" bgcolor="#cccccc" onClick="setResult(1, this)" onMouseOver="previewResult(1, this)" onMouseOut="if(resultArr[0] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
-	<tr><td>TV?OR</td><td align="center" bgcolor="#cccccc" onClick="setResult(2, this)" onMouseOver="previewResult(2, this)" onMouseOut="if(resultArr[1] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+	<tr><td>TVÅOR</td><td align="center" bgcolor="#cccccc" onClick="setResult(2, this)" onMouseOver="previewResult(2, this)" onMouseOut="if(resultArr[1] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	<tr><td>TREOR</td><td align="center" bgcolor="#cccccc" onClick="setResult(3, this)" onMouseOver="previewResult(3, this)" onMouseOut="if(resultArr[2] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	<tr><td>FYROR</td><td align="center" bgcolor="#cccccc" onClick="setResult(4, this)" onMouseOver="previewResult(4, this)" onMouseOut="if(resultArr[3] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	<tr><td>FEMMOR</td><td align="center" bgcolor="#cccccc" onClick="setResult(5, this)" onMouseOver="previewResult(5, this)" onMouseOut="if(resultArr[4] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
@@ -281,12 +283,12 @@
 	<tr><td>SUMMA</td><td align="center" bgcolor="#cccccc" id="summa1">0</td></tr>
 	<tr><td>BONUS</td><td align="center" bgcolor="#cccccc" id="bonus">0</td></tr>
 	<tr><td>PAR</td><td align="center" bgcolor="#cccccc" onClick="setResult(7, this)" onMouseOver="previewResult(7, this)" onMouseOut="if(resultArr[6] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
-	<tr><td>TV? PAR</td><td align="center" bgcolor="#cccccc" onClick="setResult(8, this)" onMouseOver="previewResult(8, this)" onMouseOut="if(resultArr[7] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+	<tr><td>TVÅ PAR</td><td align="center" bgcolor="#cccccc" onClick="setResult(8, this)" onMouseOver="previewResult(8, this)" onMouseOut="if(resultArr[7] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	<tr><td>TRISS</td><td align="center" bgcolor="#cccccc" onClick="setResult(9, this)" onMouseOver="previewResult(9, this)" onMouseOut="if(resultArr[8] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	<tr><td>FYRTAL</td><td align="center" bgcolor="#cccccc" onClick="setResult(10, this)" onMouseOver="previewResult(10, this)" onMouseOut="if(resultArr[9] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	<tr><td>LITEN STRAIGHT</td><td align="center" bgcolor="#cccccc" onClick="setResult(11, this)" onMouseOver="previewResult(11, this)" onMouseOut="if(resultArr[10] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	<tr><td>STOR STRAIGHT</td><td align="center" bgcolor="#cccccc" onClick="setResult(12, this)" onMouseOver="previewResult(12, this)" onMouseOut="if(resultArr[11] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
-	<tr><td>K?K</td><td align="center" bgcolor="#cccccc" onClick="setResult(13, this)" onMouseOver="previewResult(13, this)" onMouseOut="if(resultArr[12] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+	<tr><td>KÅK</td><td align="center" bgcolor="#cccccc" onClick="setResult(13, this)" onMouseOver="previewResult(13, this)" onMouseOut="if(resultArr[12] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	<tr><td>CHANS</td><td align="center" bgcolor="#cccccc" onClick="setResult(14, this)" onMouseOver="previewResult(14, this)" onMouseOut="if(resultArr[13] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	<tr><td>YATZY</td><td align="center" bgcolor="#cccccc" onClick="setResult(15, this)" onMouseOver="previewResult(15, this)" onMouseOut="if(resultArr[14] < 0) this.innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;'">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
 	<tr><td>SUMMA</td><td align="center" bgcolor="#cccccc" id="summa2">0</td></tr>
